@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import takoyakiSingle from '../assets/takoyaki_single.png';
+import takoyakiPlate from '../assets/takoyaki_plate.png';
+import okonomiyaki from '../assets/okonomiyaki.png';
+import dots from '../assets/dots.png';
+import dot from '../assets/dot.png';
+import ring from '../assets/ring.png';
+import lotsOfDots from '../assets/alot_of_dots.png';
+---
+
+<section class="hero-stage" id="home" aria-label="Albaitu story">
+  <div class="hero-pin">
+    <div class="hero-wash"></div>
+    <Image class="hero-dots" src={dots} alt="" widths={[700, 1152]} sizes="100vw" loading="eager" />
+    <Image class="lots-of-dots" src={lotsOfDots} alt="" widths={[260, 543]} sizes="260px" loading="eager" />
+    <Image class="static-dot" src={dot} alt="" widths={[120, 543]} sizes="120px" loading="eager" />
+    <Image class="static-ring" src={ring} alt="" widths={[170, 543]} sizes="170px" loading="eager" />
+    <div class="grain" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <p class="eyebrow hero-kicker">From our little kitchen to your hands</p>
+      <div class="story-moment hero-intro"><h1>Takoyaki<br /><em>&amp; Okonomiyaki</em></h1><p>Freshly made. Japanese flavor.<br />Crafted with passion.</p><a href="#menu" class="button">Order now <span>↗</span></a></div>
+      <div class="story-moment" id="story"><p class="moment-no">01 / 05</p><h2>Every Takoyaki begins<br />with <em>carefully prepared</em> batter.</h2></div>
+      <div class="story-moment"><p class="moment-no">02 / 05</p><h2>Filled with<br /><em>delicious</em> ingredients.</h2></div>
+      <div class="story-moment"><p class="moment-no">03 / 05</p><h2>Cooked until<br /><em>perfectly golden.</em></h2></div>
+      <div class="story-moment"><p class="moment-no">04 / 05</p><h2>Finished with rich<br /><em>Japanese sauce.</em></h2></div>
+      <div class="story-moment"><p class="moment-no">05 / 05</p><h2>Served warm<br />for <em>every customer.</em></h2></div>
+    </div>
+<div class="floating-food food-one" data-x="-35" data-y="-135" data-rotate="-145" data-scale="1.15"><Image src={takoyakiSingle} alt="" widths={[280, 612]} sizes="(max-width: 700px) 44vw, 28vw" loading="eager" /></div>
+    <div class="floating-food food-two" data-x="55" data-y="-185" data-rotate="95" data-scale=".78"><Image src={takoyakiPlate} alt="" widths={[210, 450]} sizes="(max-width: 700px) 34vw, 18vw" loading="eager" /></div>
+<div class="floating-food food-three" data-x="-100" data-y="-105" data-rotate="-50" data-scale="1.12"><Image src={takoyakiSingle} alt="" widths={[260, 612]} sizes="(max-width: 700px) 48vw, 30vw" loading="eager" /></div>
+<div class="floating-food food-four" data-x="38" data-y="-145" data-rotate="135" data-scale=".9"><Image src={okonomiyaki} alt="" widths={[220, 500]} sizes="(max-width: 700px) 36vw, 20vw" loading="eager" /></div>
+<div class="floating-food food-five" data-x="-52" data-y="-120" data-rotate="-32" data-scale=".7"><Image src={takoyakiSingle} alt="" widths={[190, 612]} sizes="(max-width: 700px) 30vw, 15vw" loading="eager" /></div>
+    <p class="scroll-prompt"><span></span> Scroll to taste</p>
+  </div>
+</section>
+
+<script>
+  import { initPageMotion } from '../lib/animations';
+  initPageMotion();
+</script>
