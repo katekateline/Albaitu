@@ -1,11 +1,9 @@
 ---
-import { Image } from 'astro:assets';
-import logo from '../assets/replacement.png';
 ---
 
 <nav class="site-nav" aria-label="Primary navigation">
   <a class="brand" href="#home" aria-label="Albaitu home">
-    <span class="brand-mark"><Image src={logo} alt="" widths={[36, 72]} sizes="36px" loading="eager" /></span>
+    <span class="brand-mark"><img src="/favicon.ico" alt="" /></span>
     <span>albaitu</span>
   </a>
   <div class="nav-links">
@@ -13,5 +11,5 @@ import logo from '../assets/replacement.png';
     <a href="#story">Cerita</a>
     <a href="#menu">Menu</a>
   </div>
-  <a class="nav-order" href="#menu">Pesan sekarang <span aria-hidden="true">↗</span></a>
+  <a class="nav-order" href="https://wa.me/6281383068936?text=Halo,%20saya%20ingin%20order%20takoyaki!">Pesan sekarang <span aria-hidden="true">↗</span></a>
 </nav>
